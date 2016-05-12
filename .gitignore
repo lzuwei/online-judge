@@ -1,0 +1,8 @@
+# IDEA
+**/.idea/
+
+# DS_Store
+DS_Store
+
+# compiled python
+.pyc
