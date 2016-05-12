@@ -55,13 +55,16 @@ void fillCantorTable(int size) {
             r = r - 1;
             c = c + 1;
         }
-        else {
+        else { // Direction Down
             r = r + 1;
             c = c - 1;
         }
     }
 }
 
+/**
+ * Recursive version of Cantor Sequence
+ */
 void recursiveFillCantor(int index, int r, int c, int direction) {
     if(r < 0 || c < 0 || index > M)
         return;
@@ -119,7 +122,6 @@ void recursiveFillCantor(int index, int r, int c, int direction) {
         recursiveFillCantor(index, r, c, direction);
     }
 }
-
 
 
 int main() {
