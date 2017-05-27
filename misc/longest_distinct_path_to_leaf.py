@@ -1,3 +1,31 @@
+"""
+Given a binary tree with non-distinct nodes, find the longest root to leaf path that contains the maximum
+number of distinct nodes.
+
+Example:
+Input:
+      5
+     / \
+    5   5
+   / \
+  3   4
+ / \   \
+5   5   6
+   /
+  3
+Output:
+3
+
+Solution:
+Use depth first traversal with backtracking. Use a hashmap to track the number of repeated elements on each path.
+Increment as you move deeper and decrement as you backtrack to discover new nodes. Keep a record on the longest distinct
+path discovered so far.
+
+Complexity:
+Time: O(N)
+Space: O(N) assuming all elements in the tree are unique.
+"""
+
 class node:
   def __init__(self, data):
     self.left = None
