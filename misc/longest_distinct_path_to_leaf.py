@@ -21,7 +21,7 @@ def root_to_leaf(n, elements):
   if n.right is not None: 
     root_to_leaf(n.right, elements)
   del elements[-1]
-  
+
 def update_max_distinct(unique_elements, current_max):
   if len(unique_elements) > current_max:
       current_max = len(unique_elements)
@@ -32,7 +32,7 @@ def decrease_element_count(unique_elements, key):
     unique_elements[key] -= 1
     if unique_elements[key] == 0:
       unique_elements.pop(key, None)
-  
+
 def longest_distinct_path(n, unique_elements, current_max):
   # check is empty node
   if n is None:
@@ -53,7 +53,7 @@ def longest_distinct_path(n, unique_elements, current_max):
     current_max = longest_distinct_path(n.right, unique_elements, current_max)
   decrease_element_count(unique_elements, n.data)
   return current_max
-  
+
 n = node(5)
 n.left = node(5)
 n.right = node(5)
