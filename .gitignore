@@ -2,7 +2,11 @@
 **/.idea/
 
 # DS_Store
-DS_Store
+**/.DS_Store
 
 # compiled python
 .pyc
+
+# CMake builds
+**/build/
+**/cmake-build-debug/
